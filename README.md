@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Dockerizing
+
+npx create-react-app CURD-FRONTEND-WEB-APP
+cd CURD-FRONTEND-WEB-APP
+
+npm run build
+
+docker build -t curd-front-app .
+docker run -p 80:80 curd-front-app
+http://localhost
+docker images
+docker ps
+docker stop <container_id>
+docker rm <container_id>
+docker rmi curd-front-app
